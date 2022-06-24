@@ -1,13 +1,13 @@
 import React from 'react'
 import './App.css'
-import { Controls } from './components/Controls'
-import BearCounter from './components/BearCounter'
+import TodoControl from './components/todo/TodoControl'
+import { Todos } from './components/todo/Todos'
 
 function App() {
   return (
     <div className="App">
-      <Controls />
-      <BearCounter />
+      <Todos />
+      <TodoControl />
     </div>
   )
 }
