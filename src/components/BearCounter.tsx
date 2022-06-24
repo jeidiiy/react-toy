@@ -1,5 +1,5 @@
 import React from 'react'
-import { useBearStore } from '../store/useStore'
+import { useBearStore } from '../store/useBearStore'
 
 export default function BearCounter() {
   const bears = useBearStore((state) => state.bears)
