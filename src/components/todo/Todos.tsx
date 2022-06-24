@@ -24,9 +24,7 @@ const TodoComponent = ({ todo }: TodoProps) => {
   return (
     <div>
       <span>{id}</span>
-      <span style={{ textDecoration: isCompleted ? 'line-through' : 'none' }}>
-        {text}
-      </span>
+      <span className={`text-blue-600`}>{text}</span>
       <input
         type="checkbox"
         checked={isCompleted}

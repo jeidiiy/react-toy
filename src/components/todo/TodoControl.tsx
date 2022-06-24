@@ -23,6 +23,7 @@ export default function TodoControl() {
   return (
     <form onSubmit={handleSubmit}>
       <input
+        className="border-solid border-2 border-sky-900"
         type="text"
         value={value}
         onChange={(e) => setValue(e.target.value)}
