@@ -10,11 +10,11 @@ function App() {
       <Todos />
       <TodoControl />
       <h1>Bookkepper</h1>
-      <Outlet />
       <nav className="border-b-2 border-solid pd-4">
         <Link to="/invoices">Invoices</Link> |{' '}
         <Link to="/expenses">Expenses</Link>
       </nav>
+      <Outlet />
     </div>
   )
 }
