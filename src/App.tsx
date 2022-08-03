@@ -1,10 +1,19 @@
-import React from 'react'
-import { Link, Outlet } from 'react-router-dom'
-import './App.css'
-import TodoControl from './components/todo/TodoControl'
-import { Todos } from './components/todo/Todos'
+import React, { useEffect, useState } from 'react';
+import { Link, Outlet } from 'react-router-dom';
+import './App.css';
+import TodoControl from './components/todo/TodoControl';
+import { Todos } from './components/todo/Todos';
+import DatePicker from 'react-datepicker';
+
+import 'react-datepicker/dist/react-datepicker.css';
 
 function App() {
+  const [startDate, setStartDate] = useState<Date | null>(new Date());
+
+  useEffect(() => {
+    console.log(startDate);
+  }, [startDate]);
+
   return (
     <div className="App">
       <Todos />
@@ -15,8 +24,13 @@ function App() {
         <Link to="/expenses">Expenses</Link>
       </nav>
       <Outlet />
+      <DatePicker
+        selected={startDate}
+        onChange={(date: Date) => setStartDate(date)}
+        popperPlacement="auto"
+      />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
